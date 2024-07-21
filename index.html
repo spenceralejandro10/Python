@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plataforma de Aprendizaje Python</title>
+<style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+        padding: 20px;
+        margin: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+    h1 {
+        text-align: center;
+        color: #ffd700;
+    }
+    .section {
+        margin-bottom: 20px;
+        border: 2px solid #333;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .section h2 {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+    .alert {
+        background-color: #dc3545;
+        color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        display: none;
+    }
+    .cronometro {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Plataforma de Aprendizaje Python</h1>
+    <div class="section">
+        <h2>Fundamentos Básicos</h2>
+        <p>1. Instalación de Python: Configura Python en tu sistema y elige un entorno de desarrollo integrado (IDE) como PyCharm, VS Code, o utiliza el intérprete interactivo de Python (IDLE).</p>
+        <p>2. Introducción a la Sintaxis: Aprende sobre la estructura básica del código en Python, incluyendo comentarios, variables, tipos de datos (números, cadenas, booleanos), y operadores básicos (+, -, *, /, //, %, **).</p>
+        <p>3. Entrada y Salida de Datos: Cómo obtener datos del usuario (input()) y mostrar resultados (print()).</p>
+        <div class="cronometro" id="cronometro1">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro1')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro1')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Control de Flujo</h2>
+        <p>1. Condicionales: Utiliza instrucciones if, else, elif para tomar decisiones basadas en condiciones.</p>
+        <p>2. Bucles: Aprende sobre bucles for y while para iterar sobre listas, tuplas, diccionarios u otros objetos iterables.</p>
+        <div class="cronometro" id="cronometro2">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro2')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro2')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Estructuras de Datos</h2>
+        <p>1. Listas, Tuplas y Diccionarios: Comprende cómo almacenar y manipular datos en estructuras como listas (mutable), tuplas (inmutable) y diccionarios (pares clave-valor).</p>
+        <div class="cronometro" id="cronometro3">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro3')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro3')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Funciones y Modularidad</h2>
+        <p>1. Definición de Funciones: Crea funciones reutilizables para organizar y simplificar tu código.</p>
+        <p>2. Módulos: Aprende a organizar tu código en módulos y a importar funciones y clases de otros archivos.</p>
+        <div class="cronometro" id="cronometro4">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro4')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro4')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Programación Orientada a Objetos (OOP)</h2>
+        <p>1. Clases y Objetos: Define clases y crea instancias de objetos, comprendiendo conceptos como atributos y métodos.</p>
+        <p>2. Herencia y Polimorfismo: Utiliza la herencia para reutilizar y extender funcionalidad de clases base y aplica el polimorfismo para trabajar con objetos de diferentes tipos de manera uniforme.</p>
+        <div class="cronometro" id="cronometro5">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro5')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro5')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Manejo de Excepciones</h2>
+        <p>1. Manejo de Errores: Aprende a manejar excepciones y errores para mejorar la robustez de tu código.</p>
+        <div class="cronometro" id="cronometro6">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro6')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro6')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Trabajo con Archivos y Operaciones de Sistema</h2>
+        <p>1. Lectura y Escritura de Archivos: Accede y manipula datos almacenados en archivos de texto o binarios.</p>
+        <div class="cronometro" id="cronometro7">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro7')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro7')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Bibliotecas Estándar y Externas</h2>
+        <p>1. Exploración de la Biblioteca Estándar: Familiarízate con las bibliotecas incluidas con Python para tareas comunes como manejo de cadenas, manipulación de fechas y horas, y más.</p>
+        <p>2. Instalación y Uso de Bibliotecas Externas: Aprende a usar pip (gestor de paquetes de Python) para instalar y gestionar bibliotecas externas como NumPy, Pandas, y Matplotlib para análisis de datos y visualización.</p>
+        <div class="cronometro" id="cronometro8">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro8')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro8')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Práctica y Proyectos</h2>
+        <p>1. Aplicación Práctica: Implementa lo aprendido en proyectos prácticos como scripts de automatización, aplicaciones web simples usando Flask o Django, o análisis de datos básicos.</p>
+        <div class="cronometro" id="cronometro9">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro9')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro9')">Pausar</button>
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Aprendizaje Continuo</h2>
+        <p>1. Exploración de Temas Avanzados: Una vez que tengas una comprensión sólida de los fundamentos, explora temas más avanzados como concurrencia, programación funcional, desarrollo web avanzado, y machine learning según tus intereses y objetivos.</p>
+        <div class="cronometro" id="cronometro10">Tiempo transcurrido: 0 minutos y 0 segundos</div>
+        <p>
+            <button onclick="startCronometro('cronometro10')">Comenzar a estudiar</button>
+            <button onclick="pauseCronometro('cronometro10')">Pausar</button>
+        </p>
+    </div>
+    
+    
+   
+    <!-- Agrega más secciones con el mismo formato para los demás temas -->
+    
+
+
+<script>
+    var segundos = {};
+    var intervalos = {};
+    var tiempoGuardado = JSON.parse(localStorage.getItem('tiempoGuardado')) || {};
+
+    function startCronometro(idCronometro) {
+        if (!intervalos[idCronometro]) {
+            segundos[idCronometro] = tiempoGuardado[idCronometro] || 0;
+            intervalos[idCronometro] = setInterval(function() {
+                segundos[idCronometro]++;
+                actualizarCronometro(idCronometro);
+            }, 1000);
+        }
+    }
+
+    function pauseCronometro(idCronometro) {
+        clearInterval(intervalos[idCronometro]);
+        delete intervalos[idCronometro];
+        guardarTiempo(idCronometro);
+    }
+
+    function actualizarCronometro(idCronometro) {
+        var minutos = Math.floor(segundos[idCronometro] / 60);
+        var seg = segundos[idCronometro] % 60;
+        document.getElementById(idCronometro).innerHTML = "Tiempo transcurrido: " + minutos + " minutos y " + seg + " segundos";
+    }
+
+    function guardarTiempo(idCronometro) {
+        tiempoGuardado[idCronometro] = segundos[idCronometro];
+        localStorage.setItem('tiempoGuardado', JSON.stringify(tiempoGuardado));
+    }
+
+    function cargarTiempoGuardado() {
+        for (var id in tiempoGuardado) {
+            if (tiempoGuardado.hasOwnProperty(id)) {
+                segundos[id] = tiempoGuardado[id];
+                actualizarCronometro(id);
+                // No iniciar automáticamente al cargar el tiempo guardado
+            }
+        }
+    }
+
+    function verificarClave() {
+        var clave = prompt("Ingresa la clave para avanzar:");
+        if (clave !== "1379") {
+            document.getElementById("alertaClave").style.display = "block";
+            // Deshabilitar los botones de estudio si la clave es incorrecta
+            var botonesEstudio = document.querySelectorAll(".section button");
+            botonesEstudio.forEach(function(btn) {
+                btn.disabled = true;
+            });
+        } else {
+            cargarTiempoGuardado();
+        }
+    }
+
+    window.onload = function() {
+        verificarClave();
+        // Pausar todos los cronómetros al cargar la página
+        for (var id in intervalos) {
+            if (intervalos.hasOwnProperty(id)) {
+                pauseCronometro(id);
+            }
+        }
+    };
+</script>
+
+</body>
+</html>
